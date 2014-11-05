@@ -1,4 +1,14 @@
-
+<?php
+  error_reporting(E_ALL);
+  ini_set('display_error',1);
+  //memulai session
+  session_start();
+  //cek adanya session
+  if(ISSET($_SESSION['username'])){
+    //jika tidak ada session 
+  } else
+  header("location:login.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
