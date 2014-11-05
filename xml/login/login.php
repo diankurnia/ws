@@ -1,16 +1,16 @@
-<html>
-<head>
-	<center><h2><b>Log In</b></h2></center> 
-</head>
-<body>
 <?php 
 //memulai session 
 session_start(); 
 //cek adanya session, jika session sudah ada maka diarahkan ke index.php 
 if (ISSET($_SESSION['username'])){ 
-header("location:index.php"); 
-}
+header("location:index.php"); }
 ?> 
+<html>
+<head>
+	<center><h2><b>Log In</b></h2></center> 
+</head>
+<body>
+
 <form method="post" action="client.php"> 
 <table border="0" align="center" cellpadding="5" 
 cellspacing="8"> 
@@ -24,7 +24,7 @@ cellspacing="8">
 </tr> 
 <tr> 
 <td colspan="2" align="center" height="10"> 
-<input name="submit" type="submit" value="Log In"> 
+<input type="submit" value="Login">
 </td> 
 </tr> 
 </table> 

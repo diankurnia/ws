@@ -21,7 +21,7 @@ function login_ws($username, $password){
 	$password = md5($password);
 	//buat koneksi
 	$db = NewADOConnection('mysql');
-	$db -> Connect('localhost','root','','data_mahasiswa');
+	$db -> Connect('localhost','root','','mahasiswa');
 	//cek username dan password dari database
 	$sql = $db -> execute("SELECT * FROM user where username='$username' AND password='$password'");
 	//cek adanya username dan password di database

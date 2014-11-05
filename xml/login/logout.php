@@ -1,10 +1,9 @@
-<?php 
-//memulai session 
-session_start(); 
-//cek adanya session, jika session ada maka akan di unset dan dilanjutkan dengan session_destroy 
-if(ISSET($_SESSION['username'])){ 
-UNSET($_SESSION['username']); 
-} 
-header("location: index.php"); 
-session_destroy(); 
-?> 
+<?php
+session_start();
+session_destroy();
+unset($_SESSION['username']);
+?>
+<center>
+<h2>Anda telah berhasil logout..</h2>
+Silahkan klik <a href="login.php"><b>disini</b></a> untuk login kembali
+</center>

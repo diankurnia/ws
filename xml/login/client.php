@@ -6,7 +6,7 @@ session_start();
 //panggil library
 require_once('nusoap/lib/nusoap.php');
 //men
-$url = 'http://localhost/ws.git/xml/server.php?wsdl';
+$url = 'http://localhost/ws/xml/login/server.php?wsdl';
 
 $client = new nusoap_client($url, 'WSDL');
 
@@ -16,6 +16,7 @@ $result = $client->call('login_ws',array('username'=>$username, 'password'=>$pas
 
 if($result == "Login Berhasil"){
 	$_SESSION['username']= $username;
+	header ("location: index.php");
 } else{
 		header ("location: login.php");
 }
